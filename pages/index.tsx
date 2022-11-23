@@ -12,14 +12,14 @@ export default function Home() {
       <Head>
         <title>Flint Style Soccer</title>
         <meta name="description" content="Introducing Flint kids to the game of soccer since 2016" />
+        <meta name="keywords" content="Flint, soccer, youth soccer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styles.header}>
-        <Image alt='Flint Style Soccer logo' className={styles.img} height={128} width={128} src={logo} />
-      </header>
 
       <main className={styles.main}>
+        <Image alt='Flint Style Soccer logo' className={`${styles.img} ${styles.logo}`} src={logo} />
+
         <h1 className={styles.title}>
           Flint Style Soccer
         </h1>

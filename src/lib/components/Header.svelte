@@ -2,6 +2,7 @@
 	import closeIcon from '$lib/assets/close.svg';
 	import logo from '$lib/assets/logo.jpg';
 	import menuIcon from '$lib/assets/menu.svg';
+	import { page } from '$app/stores';
 
 	import type { Page } from '$lib/types';
 
@@ -11,6 +12,10 @@
 
 	function toggleMenu() {
 		mobileMenuOpen = !mobileMenuOpen;
+	}
+
+	function handleLinkClick() {
+		mobileMenuOpen = false;
 	}
 </script>
 
@@ -38,10 +43,15 @@
 			<ul
 				class="py-2 bg-gray-100 mt-4 shadow-inner  md:flex md:gap-6 md:bg-transparent md:shadow-none"
 			>
-				{#each pages as page}
-					<li class="text-center py-2 md:text-gray-500 hover:text-black">
-						<a href={page.path}>{page.title}</a>
-					</li>
+				{#each pages as p}
+					<a href={p.path} on:click={handleLinkClick}>
+						<li
+							class="text-center py-3 md:text-gray-500 hover:text-black"
+							class:md:text-black={p.path === $page.url.pathname}
+						>
+							{p.title}
+						</li>
+					</a>
 				{/each}
 			</ul>
 		</div>

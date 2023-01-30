@@ -20,8 +20,8 @@
 </script>
 
 <header>
-	<nav class="py-4 flex justify-between flex-wrap">
-		<div class="flex justify-between items-center w-full md:w-auto px-4">
+	<nav class="flex flex-wrap justify-between py-4">
+		<div class="flex w-full items-center justify-between px-4 md:w-auto">
 			<a href="/">
 				<img class="h-24" src={logo} alt="Flint Style Soccer logo" />
 			</a>
@@ -36,17 +36,17 @@
 			</div>
 		</div>
 		<div
-			class="w-full md:w-auto md:max-h-min overflow-hidden transition-all duration-1000"
+			class="w-full overflow-hidden transition-all duration-1000 md:max-h-min md:w-auto"
 			class:max-h-0={!mobileMenuOpen}
 			class:max-h-screen={mobileMenuOpen}
 		>
 			<ul
-				class="py-2 bg-gray-100 mt-4 shadow-inner  md:flex md:gap-6 md:bg-transparent md:shadow-none"
+				class="mt-4 bg-gray-100 py-2 shadow-inner  md:flex md:gap-6 md:bg-transparent md:shadow-none"
 			>
 				{#each pages as p}
 					<a href={p.path} on:click={handleLinkClick}>
 						<li
-							class="text-center py-3 md:text-gray-500 hover:text-black"
+							class="py-3 text-center hover:text-black md:text-gray-500"
 							class:md:text-black={p.path === $page.url.pathname}
 						>
 							{p.title}

@@ -2,7 +2,9 @@ import { client } from '$lib/cms';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ url }) => {
-	const data = await client.fetch(`*[_type == "page" && path == $path]`, { path: url.pathname });
+	const data = await client.fetch(`*[_type == "page" && path == $path]{ content }`, {
+		path: url.pathname
+	});
 
 	if (data) {
 		return {

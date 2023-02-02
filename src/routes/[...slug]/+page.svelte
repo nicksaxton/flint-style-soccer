@@ -1,10 +1,15 @@
-<script>
+<script lang="ts">
+	import { PortableText } from '@portabletext/svelte';
+
 	import HeadingBlock from '$lib/components/HeadingBlock.svelte';
 	import ImageBlock from '$lib/components/ImageBlock.svelte';
 	import ParagraphBlock from '$lib/components/ParagraphBlock.svelte';
-	import { PortableText } from '@portabletext/svelte';
 
-	export let data;
+	export let data: {
+		page: {
+			content: any[];
+		};
+	};
 </script>
 
 <PortableText

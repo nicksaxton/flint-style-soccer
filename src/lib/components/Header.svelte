@@ -44,10 +44,10 @@
 				class="mt-4 bg-gray-100 py-2 shadow-inner  md:flex md:gap-6 md:bg-transparent md:shadow-none"
 			>
 				{#each pages as p}
-					<a href={p.path} on:click={handleLinkClick}>
+					<a href={`/${p.slug}`} on:click={handleLinkClick}>
 						<li
 							class="py-3 text-center hover:text-black md:text-gray-500"
-							class:md:text-black={p.path === $page.url.pathname}
+							class:md:text-black={p.slug === $page.params.slug}
 						>
 							{p.title}
 						</li>

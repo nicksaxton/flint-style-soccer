@@ -1,9 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 
-	import type { Page } from '$lib/types';
-	import { page } from '$app/stores';
 	import Header from '$lib/components/Header.svelte';
+	import type { Page } from '$lib/types';
 
 	export let data: {
 		pages: Page[];

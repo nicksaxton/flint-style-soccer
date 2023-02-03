@@ -4,6 +4,7 @@
 	import HeadingBlock from '$lib/components/HeadingBlock.svelte';
 	import ImageBlock from '$lib/components/ImageBlock.svelte';
 	import ParagraphBlock from '$lib/components/ParagraphBlock.svelte';
+	import UnorderedList from '$lib/components/UnorderedList.svelte';
 
 	export let data: {
 		page: {
@@ -25,8 +26,9 @@
 	<div class="px-4 md:px-0">
 		<PortableText
 			components={{
-				block: { h1: HeadingBlock, normal: ParagraphBlock },
-				types: { image: ImageBlock }
+				block: { h1: HeadingBlock, h2: HeadingBlock, normal: ParagraphBlock },
+				types: { image: ImageBlock },
+				list: { bullet: UnorderedList }
 			}}
 			value={data.page.content}
 		/>

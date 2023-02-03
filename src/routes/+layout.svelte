@@ -9,10 +9,10 @@
 	};
 </script>
 
-<div class="container mx-auto flex min-h-screen flex-col">
+<div class="flex min-h-screen flex-col">
 	<Header pages={data.pages} />
 
-	<div class="flex-grow p-4">
+	<div class="flex-grow">
 		<slot />
 	</div>
 

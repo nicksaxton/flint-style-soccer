@@ -8,11 +8,25 @@
 	export let data: {
 		page: {
 			content: any[];
+			mainImage: {
+				url: string;
+			};
 		};
 	};
 </script>
 
-<PortableText
-	components={{ block: { h1: HeadingBlock, normal: ParagraphBlock }, types: { image: ImageBlock } }}
-	value={data.page.content}
-/>
+<!-- <img class="w-screen" src={data.page.mainImage.url} alt="Hero" /> -->
+
+<div class="container mx-auto py-8">
+	<img class="mb-4 mx-auto" src={data.page.mainImage.url} alt="" />
+
+	<div class="px-4 md:px-0">
+		<PortableText
+			components={{
+				block: { h1: HeadingBlock, normal: ParagraphBlock },
+				types: { image: ImageBlock }
+			}}
+			value={data.page.content}
+		/>
+	</div>
+</div>

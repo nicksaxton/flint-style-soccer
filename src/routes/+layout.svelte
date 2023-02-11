@@ -2,15 +2,15 @@
 	import '../app.css';
 
 	import Header from '$lib/components/Header.svelte';
-	import type { Page } from '$lib/types';
+	import type { MenuItem } from '$lib/types';
 
 	export let data: {
-		pages: Page[];
+		menu: MenuItem[];
 	};
 </script>
 
 <div class="flex min-h-screen flex-col">
-	<Header pages={data.pages} />
+	<Header pages={data.menu} />
 
 	<div class="flex-grow">
 		<slot />

@@ -1,4 +1,4 @@
-export type Page = {
+export type MenuItem = {
 	title: string;
 	slug: string;
 };

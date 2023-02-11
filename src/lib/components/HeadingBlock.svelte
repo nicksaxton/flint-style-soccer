@@ -1,1 +1,1 @@
-<h1 class="text-4xl font-bold my-4 text-center md:text-left first:mt-0"><slot /></h1>
+<h1 class="my-4 text-left text-4xl font-bold first:mt-0"><slot /></h1>

@@ -5,6 +5,7 @@
 	import ImageBlock from '$lib/components/ImageBlock.svelte';
 	import ParagraphBlock from '$lib/components/ParagraphBlock.svelte';
 	import UnorderedList from '$lib/components/UnorderedList.svelte';
+	import BulletItem from '$lib/components/BulletItem.svelte';
 
 	export let data: {
 		page: {
@@ -28,7 +29,8 @@
 			components={{
 				block: { h1: HeadingBlock, h2: HeadingBlock, normal: ParagraphBlock },
 				types: { image: ImageBlock },
-				list: { bullet: UnorderedList }
+				list: { bullet: UnorderedList },
+				listItem: { bullet: BulletItem, normal: BulletItem }
 			}}
 			value={data.page.content}
 		/>

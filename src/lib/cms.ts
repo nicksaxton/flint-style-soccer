@@ -33,7 +33,5 @@ export const getPage = async (slug: string) => {
 };
 
 export const getPosts = async () => {
-	return await client.fetch(
-		`*[_type == "post"] | order(publishDate)`
-	)
-}
+	return await client.fetch(`*[_type == "post"] | order(publishDate desc)`);
+};

@@ -4,9 +4,9 @@
 	import menuIcon from '$lib/assets/menu.svg';
 	import { page } from '$app/stores';
 
-	import type { Page } from '$lib/types';
+	import type { MenuItem } from '$lib/types';
 
-	export let pages: Page[];
+	export let menu: MenuItem[];
 
 	let mobileMenuOpen = false;
 
@@ -43,13 +43,13 @@
 			<ul
 				class="mt-4 bg-gray-100 py-2 shadow-inner  md:flex md:gap-6 md:bg-transparent md:shadow-none"
 			>
-				{#each pages as p}
-					<a href={`/${p.slug}`} on:click={handleLinkClick}>
+				{#each menu as item}
+					<a href={`/${item.slug}`} on:click={handleLinkClick}>
 						<li
 							class="py-3 text-center hover:text-black md:text-gray-500"
-							class:md:text-black={p.slug === $page.params.slug}
+							class:md:text-black={item.slug === $page.params.slug}
 						>
-							{p.title}
+							{item.title}
 						</li>
 					</a>
 				{/each}

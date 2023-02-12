@@ -10,10 +10,12 @@
 </script>
 
 <div class="flex min-h-screen flex-col">
-	<Header pages={data.menu} />
+	<Header menu={data.menu} />
 
 	<div class="flex-grow">
-		<slot />
+		<div class="container mx-auto py-8">
+			<slot />
+		</div>
 	</div>
 
 	<footer class="py-2 text-center text-gray-400">

@@ -24,10 +24,16 @@ export const getPage = async (slug: string) => {
 				_type == "image" => {
 					'url': asset->url
 				}
-	  		} 
+			} 
 		}[0]`,
 		{
 			slug: slug || null
 		}
 	);
 };
+
+export const getPosts = async () => {
+	return await client.fetch(
+		`*[_type == "post"] | order(publishDate)`
+	)
+}

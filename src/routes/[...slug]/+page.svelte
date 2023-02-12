@@ -17,13 +17,11 @@
 	};
 </script>
 
-<!-- <img class="w-screen" src={data.page.mainImage.url} alt="Hero" /> -->
+{#if data.page.mainImage}
+	<img class="mx-auto mb-4" src={data.page.mainImage.url} alt="" />
+{/if}
 
-<div class="container mx-auto py-8">
-	{#if data.page.mainImage}
-		<img class="mb-4 mx-auto" src={data.page.mainImage.url} alt="" />
-	{/if}
-
+{#if data.page.content}
 	<div class="px-4 md:px-0">
 		<PortableText
 			components={{
@@ -35,4 +33,4 @@
 			value={data.page.content}
 		/>
 	</div>
-</div>
+{/if}

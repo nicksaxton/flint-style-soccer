@@ -9,6 +9,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Flint Style Soccer</title>
+</svelte:head>
+
 <div class="flex min-h-screen flex-col">
 	<Header menu={data.menu} />
 

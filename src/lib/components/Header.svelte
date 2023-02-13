@@ -21,7 +21,7 @@
 
 <header class="container mx-auto">
 	<nav class="flex flex-wrap justify-between py-4">
-		<div class="flex w-full items-center justify-between px-4 md:w-auto">
+		<div class="flex w-full items-center justify-between px-2 md:w-auto md:px-0">
 			<a href="/">
 				<img class="h-24" src={logo} alt="Flint Style Soccer logo" />
 			</a>

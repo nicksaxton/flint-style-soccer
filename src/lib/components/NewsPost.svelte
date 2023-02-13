@@ -12,8 +12,8 @@
 </script>
 
 <a href={post.link}>
-	<article class="mb-4 flex w-full gap-4 border-b pb-4">
-		<img class="w-48" src={post.imageUrl} alt={`Photo of ${post.title}`} />
+	<article class="mb-4 flex w-full flex-col gap-4 border-b pb-4 md:flex-row">
+		<img class="w-full md:w-48" src={post.imageUrl} alt={`Photo of ${post.title}`} />
 		<div>
 			<p class="text-sm text-gray-500">{formattedPublishDate}</p>
 			<h2 class="text-xl font-bold">{post.title}</h2>

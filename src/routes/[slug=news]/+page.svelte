@@ -8,8 +8,10 @@
 	};
 </script>
 
-<HeadingBlock>News</HeadingBlock>
+<div class="px-4 md:px-0">
+	<HeadingBlock>News</HeadingBlock>
 
-{#each data.posts as post}
-	<NewsPost {post} />
-{/each}
+	{#each data.posts as post}
+		<NewsPost {post} />
+	{/each}
+</div>

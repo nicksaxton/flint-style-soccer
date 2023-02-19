@@ -17,6 +17,8 @@
 	function handleLinkClick() {
 		mobileMenuOpen = false;
 	}
+
+	console.log($page);
 </script>
 
 <header class="container mx-auto">
@@ -53,6 +55,14 @@
 						</li>
 					</a>
 				{/each}
+				<a href={`/volunteer`} on:click={handleLinkClick}>
+					<li
+						class="py-3 text-center hover:text-black md:text-gray-500"
+						class:md:text-black={$page.route.id === '/volunteer'}
+					>
+						Volunteer
+					</li>
+				</a>
 			</ul>
 		</div>
 	</nav>

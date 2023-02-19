@@ -17,8 +17,6 @@
 	function handleLinkClick() {
 		mobileMenuOpen = false;
 	}
-
-	console.log($page);
 </script>
 
 <header class="container mx-auto">

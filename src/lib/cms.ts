@@ -43,6 +43,10 @@ export const getPosts = async () => {
 	return await client.fetch(`*[_type == "post"] | order(publishDate desc)`);
 };
 
+export const getSponsors = async () => {
+	return await client.fetch('*[_type == "sponsor"] { name, "imageUrl": image.asset->url }');
+};
+
 export const saveVolunteer = async (data: Volunteer) => {
 	await client.create({
 		_type: 'volunteer',

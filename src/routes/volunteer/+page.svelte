@@ -11,7 +11,7 @@
 {#if form && form.success}
 	<div>Thank you for volunteering!</div>
 {:else}
-	<form class="mx-auto w-full px-4 md:w-full md:px-0 lg:w-1/2" method="post" use:enhance>
+	<form class="w-full px-4 md:w-full md:px-0 lg:w-2/3" method="post" use:enhance>
 		<HeadingBlock>Volunteer</HeadingBlock>
 		<p class="mb-4">Sign up to volunteer with Flint Style Soccer.</p>
 		<div class="flex w-full flex-col md:flex-row md:gap-4">
@@ -59,9 +59,8 @@
 				</div>
 			{/if}
 		</div>
-		<button
-			class="float-right rounded bg-black py-2 px-8 text-white hover:bg-gray-700"
-			type="submit">Sign Up</button
+		<button class="rounded bg-black py-2 px-16 text-white hover:bg-gray-800" type="submit"
+			>Sign Up</button
 		>
 	</form>
 {/if}

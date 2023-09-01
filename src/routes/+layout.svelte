@@ -11,6 +11,10 @@
 
 <svelte:head>
 	<title>Flint Style Soccer</title>
+	<meta
+		name="description"
+		content="Flint Style Soccer was founded in 2016 with a mission to introduce Flint kids to the game of soccer."
+	/>
 </svelte:head>
 
 <div class="flex min-h-screen flex-col">

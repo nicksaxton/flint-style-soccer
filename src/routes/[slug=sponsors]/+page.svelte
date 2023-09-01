@@ -8,8 +8,8 @@
 
 <HeadingBlock>Sponsors</HeadingBlock>
 
-<div class="grid grid-cols-2 items-center justify-items-center gap-16 md:grid-cols-4">
+<div class="flex flex-wrap items-center justify-center gap-16">
 	{#each sponsors as sponsor}
-		<img class="max-h-36" src={sponsor.imageUrl} alt={sponsor.name} />
+		<img class="max-h-48 max-w-xs" src={sponsor.imageUrl} alt={sponsor.name} />
 	{/each}
 </div>

@@ -17,7 +17,7 @@
 	<Header menu={data.menu} />
 
 	<div class="flex-grow">
-		<div class="container mx-auto py-8">
+		<div class="mx-auto max-w-3xl py-8">
 			<slot />
 		</div>
 	</div>

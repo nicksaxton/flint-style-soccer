@@ -19,7 +19,7 @@
 	}
 </script>
 
-<header class="container mx-auto">
+<header class="mx-auto w-full max-w-3xl">
 	<nav class="flex flex-wrap justify-between py-4">
 		<div class="flex w-full items-center justify-between px-2 md:w-auto md:px-0">
 			<a href="/">

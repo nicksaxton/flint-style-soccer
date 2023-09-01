@@ -26,7 +26,7 @@
 		</div>
 	</div>
 
-	<footer class="py-2 text-center text-gray-400">
+	<footer class="py-2 text-center text-gray-800">
 		<small>&copy; 2023 Flint Style Soccer</small>
 	</footer>
 </div>

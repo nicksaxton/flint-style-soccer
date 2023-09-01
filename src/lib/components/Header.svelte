@@ -44,23 +44,21 @@
 				class="mt-4 bg-gray-100 py-2 shadow-inner  md:flex md:gap-6 md:bg-transparent md:shadow-none"
 			>
 				{#each menu as item}
-					<a href={`/${item.slug}`} on:click={handleLinkClick}>
-						<li
-							class="py-3 text-center hover:text-black md:text-gray-500"
-							class:md:text-black={item.slug === $page.params.slug}
-						>
-							{item.title}
-						</li>
-					</a>
-				{/each}
-				<a href={`/volunteer`} on:click={handleLinkClick}>
 					<li
 						class="py-3 text-center hover:text-black md:text-gray-500"
-						class:md:text-black={$page.route.id === '/volunteer'}
+						class:md:text-black={item.slug === $page.params.slug}
 					>
-						Volunteer
+						<a href={`/${item.slug}`} on:click={handleLinkClick}>
+							{item.title}
+						</a>
 					</li>
-				</a>
+				{/each}
+				<li
+					class="py-3 text-center hover:text-black md:text-gray-500"
+					class:md:text-black={$page.route.id === '/volunteer'}
+				>
+					<a href={`/volunteer`} on:click={handleLinkClick}> Volunteer </a>
+				</li>
 			</ul>
 		</div>
 	</nav>

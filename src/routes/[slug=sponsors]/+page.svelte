@@ -6,10 +6,12 @@
 	const { sponsors } = data;
 </script>
 
-<HeadingBlock>Sponsors</HeadingBlock>
+<div class="px-4 md:px-0">
+	<HeadingBlock>Sponsors</HeadingBlock>
 
-<div class="flex flex-wrap items-center justify-center gap-16">
-	{#each sponsors as sponsor}
-		<img class="max-h-48 max-w-xs" src={sponsor.imageUrl} alt={sponsor.name} />
-	{/each}
+	<div class="flex flex-wrap items-center justify-center gap-16">
+		{#each sponsors as sponsor}
+			<img class="max-h-48 max-w-xs" src={sponsor.imageUrl} alt={sponsor.name} />
+		{/each}
+	</div>
 </div>

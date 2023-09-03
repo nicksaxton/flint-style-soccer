@@ -44,7 +44,9 @@ export const getPosts = async () => {
 };
 
 export const getSponsors = async () => {
-	return await client.fetch('*[_type == "sponsor"] { name, "imageUrl": image.asset->url }');
+	return await client.fetch(
+		'*[_type == "sponsor"] { name, "imageUrl": image.asset->url } | order(name asc)'
+	);
 };
 
 export const saveVolunteer = async (data: Volunteer) => {
